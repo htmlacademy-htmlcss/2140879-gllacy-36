@@ -3,10 +3,133 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+<header class="main-header">
+  <h1 class="visually-hidden">Интернет-магазин «Глэйси».</h1>
+  <span class="page-header-logo">
+    <img class="header-logo" src="images/header/header_logo.svg" alt="Логотип интернет-магазина «Глэйси»." width="137" height="56">
+  </span>
+  <nav class="navigation">
+    <ul class="heder-menu-list list">
+      <li class="heder-menu-item">
+        <div class="dropdown">
+          <button class="navigation-dropdown-button menu-shape" type="button">Каталог</button>
+          <ul class="dropdown-list list">
+            <li class="dropdown-item dropdown-item-current">
+              <a class="dropdown-link link label-style" href="catalog.html" tabindex="-1">Новинки</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link link label-style" href="catalog.html">Сливочное</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link link label-style" href="catalog.html">Щербеты</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link link label-style" href="catalog.html">Фруктовый&nbsp;лед</a>
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-link link label-style" href="catalog.html">Мелорин</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="heder-menu-item">
+        <a class="navigation-link link menu-shape" href="#">Доставка и оплата</a>
+      </li>
+      <li class="heder-menu-item">
+        <a class="navigation-link link menu-shape" href="#">О компании</a>
+      </li>
+    </ul>
+    <div class="heder-contacts">
+      <a class="heder-contacts-phone contacts-style link menu-shape" href="tel:+78005558628">+7 800 555-86-28</a>
+    </div>
+    <div class="heder-menu">
+      <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+        <button class="search-button menu-shape" type="button">
+          <span class="visually-hidden">Кнопка поиска.</span>
+        </button>
+        <div class="search-wrapper">
+          <label class="main-search" for="main-search">
+            <span class="visually-hidden">Поиск по сайту.</span>
+          </label>
+          <input class="search-input main-input" id="main-search" placeholder="Поиск по сайту" type="search" name="main-search" required>
+          <button class="search-erase-button" type="button">
+            <span class="visually-hidden">Стереть.</span>
+          </button>
+        </div>
+      </form>
+      <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
+        <button class="heder-menu-entrance label-style menu-shape" type="button">Вход</button>
+        <div class="login-popup">
+          <h2 class="login-popup-title special-offer-item-title">Личный кабинет</h2>
+          <label class="login-popup-label" for="popap-email">
+            <span class="visually-hidden">Введите ваш e-mail.</span>
+            <input class="login-popup-input main-input" type="email" id="popap-email" name="e-mail" placeholder="email@example.com" required>
+          </label>
+          <label class="login-popup-label" for="popap-password">
+            <span class="visually-hidden">Введите пароль.</span>
+            <input class="login-popup-input main-input" type="password" id="popap-password" name="password" placeholder="••••••" required>
+          </label>
+          <div class="login-popup-wrapper">
+            <button class="login-popup-button button button-special" type="submit">Войти</button>
+            <div class="login-popup-link-wrapper">
+              <a class="login-popup-link label-style" href="#">Забыли пароль?</a>
+              <a class="login-popup-link label-style" href="#">Регистрация</a>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="header-cart-dropdown">
+        <button class="heder-menu-cart label-style menu-shape" type="button">2 товара
+          <span class="visually-hidden">Корзина.</span>
+        </button>
+        <div class="header-cart">
+<!--                  Для показа состояния корзины предназначен класс cart-current-->
+          <div class="header-cart-full cart-current">
+            <h2 class="header-cart-title special-offer-item-title">Корзина</h2>
+            <ul class="cart-items-list list">
+              <li class="cart-item">
+                <a class="header-cart-link-image link" href="#">
+                  <img class="header-cart-image" src="images/content-images/raspberry-flavor.jpg" alt="Изображение мороженого Малинка." width="46" height="46">
+                </a>
+                <div class="product-info-wrapper">
+                  <a class="header-cart-link link" href="#">Малинка</a>
+                  <span class="cart-quantity-selected">1 кг х 310 ₽</span>
+                </div>
+                <span class="header-cart-price cart-price">310&nbsp;₽</span>
+                <button class="cart-item-button" type="button">
+                  <span class="visually-hidden">Кнопка удаления товара из корзины.</span>
+                </button>
+              </li>
+              <li class="cart-item">
+                <a class="header-cart-link-image link" href="#">
+                  <img class="header-cart-image" src="images/content-images/bubblegum-flavor.jpg" alt="Изображение мороженого Бабл-гам." width="46" height="46">
+                </a>
+                <div class="product-info-wrapper">
+                  <a class="header-cart-link link" href="#">Бабл&#8209;гам</a>
+                  <span class="cart-quantity-selected">1,5 кг х 320 ₽</span>
+                </div>
+                <span class="header-cart-price cart-price">480&nbsp;₽</span>
+                <button class="cart-item-button" type="button">
+                  <span class="visually-hidden">Кнопка удаления товара из корзины.</span>
+                </button>
+              </li>
+            </ul>
+            <div class="popover-cart-info">
+              <button class="cart-popup-button button button-special" type="submit">Оформить заказ</button>
+              <span class="cart-total header-cart-price">Итого: 790 ₽</span>
+            </div>
+          </div>
+          <div class="header-cart-empty">
+            <p class="cart-empty-content special-offer-item-title">Ваша&nbsp;корзина&nbsp;пока пуста</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
 
   </body>
 </html>
